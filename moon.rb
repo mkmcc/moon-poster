@@ -373,7 +373,7 @@ calculations done in \\textit{Pacific Standard Time}
 
     # mark weekends (friday and saturday nights)
     #
-    if weekday == 4 || weekday == 5
+    if weekday == 5 || weekday == 6
       x = (r+1.4*scale) * sin(theta-0.05)
       y = (r+1.4*scale) * cos(theta-0.05)
 

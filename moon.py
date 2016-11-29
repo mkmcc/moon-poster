@@ -33,7 +33,7 @@ def moons_in_year(year):
   date = ephem.Date(datetime.date(year,01,01))
   while date.datetime().year == year:
       y, m, d, h, min, s = date.tuple()
-      weekday = (ephem.localtime(date)).isoweekday()
+      weekday = (date.datetime()).isoweekday()
       phase = phase_on_day(date)
 
       # now determine whether the moon is new of full
