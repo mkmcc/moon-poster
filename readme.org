@@ -1,0 +1,18 @@
+moon-poster: makes a pretty lunar phase poster, useful for planning
+night hikes
+
+i use the [[http://rhodesmill.org/pyephem/][python pyephem]] package to calculate lunar phases, and the
+[[http://tioga.rubyforge.org/doc/][tioga]] plotting package to lay out and typeset the poster.
+
+shows lunar phase, full and new moons, and friday and saturday nights.
+
+calculates are done in the local timezone, which is pacific standard
+time for me.
+
+below i show an example full poster:
+
+[[./examples/full.png]]
+
+and a detail:
+
+[[./examples/detail.png]]
