@@ -1,17 +1,18 @@
 moon-poster:
 ============
-makes a pretty lunar phase poster, useful for planning night hikes
+This program makes a pretty lunar phase calendar, useful for planning night hikes.
 
-For every day in the year, this poster shows the lunar phase and marks full and new moons, along with friday and saturday nights.
+For every day in the year, the calendar shows the lunar phase and marks full and new moons, along with friday and saturday nights.
 At a glance, you can use it to plan weekend full-moon hikes.
 
-All calculates are done in the local timezone, which is pacific standard time for me.
+All calculations are done in the local timezone, which is Pacific Standard Time for the examples shown here.
+I believe the calculations are accurate, but please confirm them before using this for anything important.
 
 
 examples:
 ---------
 
-below i show an example full poster:
+Here's an example of a full poster:
 
 ![full poster](./examples/full.png)
 
@@ -22,13 +23,13 @@ and a detail:
 
 usage:
 ------
-Making the poster is a two-step process: first, you must generate the lunar phase data:
+Making the poster is a two-step process: first, you run this python script to generate calendar data:
 
     python moon.py
 
 You may need to edit the file to set the time zone or the range of years you want.
 
-Next, you can run tioga to make the poster
+Next, you run tioga to make the poster:
 
     tioga moon.rb -s
 
@@ -46,3 +47,8 @@ I use the [pyephem](http://rhodesmill.org/pyephem/) python package to calculate 
 
 The poster is typeset in the *Garamond Premier Pro* font by Robert Slimbach.
 This is not included in the repo, so you may need to change the font in order to get it to compile.
+Simply comment out the line
+
+    t.tex_preview_preamble += "\n\t\\usepackage{GaramondPremierPro}\n"
+
+or change it to your favorite pdflatex font package.
