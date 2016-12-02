@@ -30,13 +30,8 @@ class MyPlots
     t.tex_preview_preamble += "\n\t\\usepackage{GaramondPremierPro}\n"
 
     # set some colors...
-    @bg_color = MidnightBlue
-    @fg_color = Cornsilk
-
-    # ... make background a bit darker
-    @bg_color = t.rgb_to_hls(@bg_color)
-    @bg_color[1] *= 0.75
-    @bg_color = t.hls_to_rgb(@bg_color)
+    @bg_color = t.hls_to_rgb([220.0, 0.25, 0.65])
+    @fg_color = t.hls_to_rgb([ 57.0, 0.90, 1.00])
 
     t.def_figure('poster') do
       # year for the plot (can be set externally)
