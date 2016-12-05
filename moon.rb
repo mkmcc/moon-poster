@@ -276,13 +276,17 @@ calculations done in \\textit{Pacific Standard Time}
 
     # shift plot coordinates slightly so that spirals look "centered"
     #
-    t.show_plot([-0.925, 1.075, 1, -1]) do
+    rng = Dvector.new([-1.0, 1.0, 1.0, -1.0])
+    xc, yc = [-0.125, -0.125]
+    ctr = Dvector.new([xc, xc, yc, yc])
+
+    t.show_plot(((rng-ctr)*0.85).to_ary) do
       # start with a label for the month
-      t.show_text('x' => 0.0, 'y' => 0.9,
+      t.show_text('x' => 0.0, 'y' => 0.725,
                   'text'          => "\\textsw{#{month}}",
                   'color'         => @fg_color,
-                  'scale'         => 2.0,
-                  'alignment'     => ALIGNED_AT_TOP,
+                  'scale'         => 2.25,
+                  'alignment'     => ALIGNED_AT_BASELINE,
                   'justification' => RIGHT_JUSTIFIED)
 
       # now draw a moon for every day
