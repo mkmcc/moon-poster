@@ -363,7 +363,7 @@ calculations done in \\textit{Pacific Standard Time}
                 'alignment'     => ALIGNED_AT_MIDHEIGHT,
                 'justification' => CENTERED,
                 'color'         => (label == 'n') ? @fg_color : @bg_color,
-                'scale'         => 0.75) if label
+                'scale'         => 1.0) if label
 
 
     # mark weekends (friday and saturday nights)
@@ -389,7 +389,7 @@ calculations done in \\textit{Pacific Standard Time}
                 'alignment'     => ALIGNED_AT_MIDHEIGHT,
                 'justification' => CENTERED,
                 'color'         => @fg_color,
-                'scale'         => 0.75)
+                'scale'         => 1.0)
   end
 
 end
