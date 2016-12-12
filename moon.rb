@@ -52,7 +52,7 @@ class MyPlots
   def enter_page
     # make individual panels for months square
     #
-    $aspect_ratio = (4.0/3.0) / 0.85
+    $aspect_ratio = (4.0/3.0) / (1.0 - 0.1 - 0.075)
 
     # margins around the edge
     #
@@ -82,7 +82,7 @@ class MyPlots
   def make_poster
     # main body of the poster
     t.subfigure('top_margin'    => 0.1,
-                'bottom_margin' => 0.05) { diagram }
+                'bottom_margin' => 0.075) { diagram }
 
     # title at the top
     t.subfigure('bottom_margin' => 0.9) do
