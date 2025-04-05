@@ -11,7 +11,8 @@ class MyPlots
   def run
     t.save_dir = 'moon-posters'
 
-    for i in 2015..2025
+    #for i in 2015..2025
+    for i in 2036..2100
       puts i
       @year = i
 

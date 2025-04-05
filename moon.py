@@ -30,7 +30,7 @@ def moons_in_year(year):
 
   # loop over days in the year:
   #
-  date = ephem.Date(datetime.date(year,01,01))
+  date = ephem.Date(datetime.date(year,1,1))
   while date.datetime().year == year:
       y, m, d, h, min, s = date.tuple()
       weekday = (date.datetime()).isoweekday()
@@ -75,9 +75,14 @@ def write_year(year):
         thefile.write("%d\t%d\t%d\t%f\t%d\t%d\n" % item)
 
 
-for i in range(2015,2026):
-    print i
+# for i in range(2015,2026):
+#     print i
+#     write_year(i)
+
+for i in range(2025,2101):
+    print(i)
     write_year(i)
+
 
 # Local Variables:
 # compile-command: "python moon.py"
